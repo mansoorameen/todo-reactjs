@@ -14,7 +14,7 @@ useEffect(() => {
   db.collection('todos').orderBy('timestamp','desc').onSnapshot(snapshot => {
     setTodos(snapshot.docs.map(doc => ({id: doc.id ,todo: doc.data().todo})))
   } ) 
-  // eslint-disabled-next-line
+  
 }, []);
 
 const addTodo = (event) => {
