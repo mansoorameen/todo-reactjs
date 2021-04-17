@@ -1,7 +1,9 @@
-import { List, ListItem, ListItemAvatar, ListItemText, Button } from '@material-ui/core';
+import { List, ListItem, ListItemAvatar, ListItemText, Button, Checkbox } from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import React from 'react'
 import db from './firebase';
+
+
 
 
 function Todo(props) {
@@ -12,8 +14,9 @@ function Todo(props) {
                 <ListItemAvatar>
 
                 </ListItemAvatar>
+               
                 <ListItemText className="list" primary={props.todo.todo} secondary="Todo" />
-           
+                <Checkbox inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} />
             <DeleteForeverIcon className="icon" onClick={event => db.collection('todos').doc(props.todo.id).delete()} />
             </ListItem>
         </List>
