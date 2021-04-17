@@ -29,6 +29,12 @@ const addTodo = (event) => {
 
 }
 
+const handleKeyDown = (e) => {
+  if (e.key === " ") {
+    e.preventDefault();
+  }
+};
+
   return (
     <div className="App">
      <h1> Make your todo list</h1>
@@ -37,7 +43,7 @@ const addTodo = (event) => {
 
     <FormControl>
       <InputLabel> ✅ Write a Todo</InputLabel>
-      <Input value={input} onChange={event => setInput(event.target.value)} />
+      <Input value={input} onKeyDown={handleKeyDown} onChange={event => setInput(event.target.value)} />
     </FormControl>
 
      <Button type="submit" disabled={!input} onClick={addTodo} variant="contained" color="primary">
