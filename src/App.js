@@ -30,7 +30,7 @@ const addTodo = (event) => {
 }
 
 const handleKeyDown = (e) => {
-  if (e.key === " ") {
+  if (e.key === " " && input.length===0) {
     e.preventDefault();
   }
 };
