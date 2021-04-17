@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemAvatar, ListItemText, Button, Checkbox } from '@material-ui/core';
+import { List, ListItem, ListItemAvatar, ListItemText, Checkbox } from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import React from 'react'
 import db from './firebase';
